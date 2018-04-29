@@ -1,0 +1,24 @@
+{
+  "name": "vk-backup",
+  "version": "1.0.0",
+  "main": "dist/vk-backup.js",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "react-scripts-kotlin gen-idea-libs",
+    "copy-libs": "node copy-libs/dist/copy-libs.js",
+    "build": "node dist/vk-backup.js"
+  },
+  "dependencies": {
+    "@jetbrains/kotlin-extensions": "^1.0.1-pre.27",
+    "@jetbrains/kotlin-webpack-plugin": "^1.2.5",
+    "@types/dotenv": "^4.0.3",
+    "@types/node": "^10.0.0",
+    "core-js": "^2.5.5",
+    "dotenv": "^5.0.1",
+    "kotlin": "^1.2.40",
+    "kotlinx-html": "^0.6.9",
+    "node-vk-sdk": "^1.0.5",
+    "react-scripts-kotlin": "^2.1.9",
+    "ts2kt": "^0.1.3"
+  }
+}
