@@ -4,7 +4,7 @@
   "main": "dist/vk-backup.js",
   "license": "MIT",
   "scripts": {
-    "postinstall": "react-scripts-kotlin gen-idea-libs",
+    "postinstall": "react-scripts-kotlin gen-idea-libs && yarn copy-libs",
     "copy-libs": "node copy-libs/dist/copy-libs.js",
     "build": "node dist/vk-backup.js"
   },

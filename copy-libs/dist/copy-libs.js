@@ -1,10 +1,10 @@
-(function (_, Kotlin, $module$_jetbrains_kotlin_webpack_plugin_libraries_lookup, $module$______package_json, $module$node_path, $module$node_fs) {
+(function (_, Kotlin, $module$_jetbrains_kotlin_webpack_plugin_libraries_lookup, $module$______package_json, $module$path, $module$fs) {
   'use strict';
   var Unit = Kotlin.kotlin.Unit;
-  var basename = $module$node_path.basename;
-  var join = $module$node_path.join;
-  var copyFile = $module$node_fs.copyFile;
-  var mkdir = $module$node_fs.mkdir;
+  var basename = $module$path.basename;
+  var join = $module$path.join;
+  var copyFile = $module$fs.copyFile;
+  var mkdir = $module$fs.mkdir;
   function rethrow$lambda(it) {
     if (it != null)
       throw it;
@@ -36,4 +36,4 @@
   main([]);
   Kotlin.defineModule('copy-libs', _);
   return _;
-}(module.exports, require('kotlin'), require('@jetbrains/kotlin-webpack-plugin/libraries-lookup'), require('../../package.json'), require('node/path'), require('node/fs')));
+}(module.exports, require('kotlin'), require('@jetbrains/kotlin-webpack-plugin/libraries-lookup'), require('../../package.json'), require('path'), require('fs')));
