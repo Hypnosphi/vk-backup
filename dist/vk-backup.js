@@ -307,7 +307,7 @@
     $receiver.append_gw00v9$('<!DOCTYPE html>');
     html(appendHTML($receiver), main$lambda$lambda$lambda(posts));
     var htmlString = $receiver.toString();
-    writeFile('dist/index.html', htmlString, main$lambda$lambda);
+    writeFile('public/index.html', htmlString, main$lambda$lambda);
     return Unit;
   }
   function main$lambda_2(it) {
