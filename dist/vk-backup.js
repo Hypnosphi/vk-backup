@@ -311,7 +311,8 @@
     return Unit;
   }
   function main$lambda_2(it) {
-    throw it;
+    process.exit(1);
+    return Unit;
   }
   function main(args) {
     config();
