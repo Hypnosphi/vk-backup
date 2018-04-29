@@ -90,5 +90,5 @@ fun main(args: Array<String>) {
             if (it != null) throw it
             process.exit(0)
         }
-    }.catch { throw it }
+    }.catch { process.exit(1) }
 }
