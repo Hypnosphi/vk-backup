@@ -16,6 +16,7 @@
   var appendHTML = $module$kotlinx_html_js.kotlinx.html.stream.appendHTML_9kwp7w$;
   var set_lang = $module$kotlinx_html_js.kotlinx.html.set_lang_ueiko3$;
   var meta = $module$kotlinx_html_js.kotlinx.html.meta_xvdp3k$;
+  var title = $module$kotlinx_html_js.kotlinx.html.title_3v9ivn$;
   var link = $module$kotlinx_html_js.kotlinx.html.link_gyx145$;
   var trimIndent = Kotlin.kotlin.text.trimIndent_pdl1vz$;
   var unsafe = $module$kotlinx_html_js.kotlinx.html.unsafe_vdrn79$;
@@ -202,6 +203,7 @@
   }
   function main$lambda$lambda$lambda$lambda$lambda($receiver) {
     meta($receiver, void 0, void 0, void 0, main$lambda$lambda$lambda$lambda$lambda$lambda);
+    title($receiver, '\u041A\u041E\u0421');
     link($receiver, 'index.css', 'stylesheet');
     script($receiver, void 0, void 0, main$lambda$lambda$lambda$lambda$lambda$lambda_0);
     return Unit;

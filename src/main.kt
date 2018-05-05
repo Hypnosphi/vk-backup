@@ -57,6 +57,7 @@ fun main(args: Array<String>) {
                     lang = "ru"
                     head {
                         meta { charset = "utf-8" }
+                        title("КОС")
                         link("index.css", "stylesheet")
                         script {
                             unsafe {
