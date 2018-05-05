@@ -5,6 +5,7 @@ import kotlin.js.*
 fun vkApi(init: VKApiOptions.() -> Unit = {}) = VKApi(jsObject(init))
 fun VKApi.wallGet(init: WallGetParams.() -> Unit = {}) = wallGet(jsObject(init))
 fun VKApi.photosGetById(init: PhotosGetByIdParams.() -> Unit = {}) = photosGetById(jsObject(init))
+fun VKApi.videoGet(init: VideoGetParams.() -> Unit = {}) = videoGet(jsObject(init))
 
 const val PAGE_SIZE = 100
 
@@ -32,5 +33,9 @@ fun VKApi.getAllPosts(init: WallGetParams.() -> Unit = {}): Promise<List<WallWal
 fun PhotosPhoto.ownerId(groupId: Number) = if (owner_id == 100) groupId else owner_id
 
 fun PhotosPhoto.request(groupId: Number) = listOf(ownerId(groupId), id, access_key)
+    .filterNotNull()
+    .joinToString("_")
+
+val VideoVideo.request get() = listOf(owner_id, id, access_key)
     .filterNotNull()
     .joinToString("_")

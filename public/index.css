@@ -35,7 +35,6 @@ p {
 hr {
     border: none;
     text-align: center;
-    color: #ddd;
     font-size: 32px;
     letter-spacing: -8px;
     overflow: visible;
@@ -51,9 +50,11 @@ hr::after {
 
 hr::before {
     content: '⦧';
+    color: #BBDEFB;
 }
 hr::after {
     content: '⦦';
+    color: #FFCDD2;
 }
 
 a {
@@ -66,5 +67,12 @@ a:not(:hover) {
 
 img {
     max-width: calc(100vw - 64px);
+    margin-top: 8px;
+}
+
+iframe {
+    border: none;
+    height: calc(56.25vw - 36px);
+    width: calc(100vw - 64px);
     margin-top: 8px;
 }
