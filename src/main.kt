@@ -58,6 +58,7 @@ fun main(args: Array<String>) {
                     head {
                         meta { charset = "utf-8" }
                         title("КОС")
+                        link("favicon.ico", "shortcut icon", "image/x-icon")
                         link("index.css", "stylesheet")
                         script {
                             unsafe {
@@ -122,7 +123,7 @@ fun main(args: Array<String>) {
                                     }
                                 }
                             }
-                            hr()
+                            img("solidarity", "solidarity.svg", "solidarity")
                         }
                     }
                 }

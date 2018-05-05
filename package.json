@@ -19,6 +19,7 @@
     "kotlinx-html": "^0.6.9",
     "node-vk-sdk": "^1.0.5",
     "react-scripts-kotlin": "^2.1.9",
+    "sharp": "^0.20.2",
     "ts2kt": "^0.1.3"
   }
 }

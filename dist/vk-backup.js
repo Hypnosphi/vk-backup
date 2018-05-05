@@ -32,7 +32,6 @@
   var a = $module$kotlinx_html_js.kotlinx.html.a_gu26kr$;
   var iframe = $module$kotlinx_html_js.kotlinx.html.iframe_rz24s4$;
   var article = $module$kotlinx_html_js.kotlinx.html.article_hpv6ge$;
-  var hr = $module$kotlinx_html_js.kotlinx.html.hr_17yvwq$;
   var body = $module$kotlinx_html_js.kotlinx.html.body_qwuuhi$;
   var html = $module$kotlinx_html_js.kotlinx.html.html_dq808k$;
   var writeFile = $module$fs.writeFile;
@@ -93,7 +92,7 @@
       console.log(closure$offset);
       addAll(closure$posts, it.items);
       var nextOffset = closure$offset + 100 | 0;
-      if (nextOffset <= numberToInt(it.count)) {
+      if (false && nextOffset <= numberToInt(it.count)) {
         return closure$getAll(nextOffset);
       }
        else {
@@ -204,6 +203,7 @@
   function main$lambda$lambda$lambda$lambda$lambda($receiver) {
     meta($receiver, void 0, void 0, void 0, main$lambda$lambda$lambda$lambda$lambda$lambda);
     title($receiver, '\u041A\u041E\u0421');
+    link($receiver, 'favicon.ico', 'shortcut icon', 'image/x-icon');
     link($receiver, 'index.css', 'stylesheet');
     script($receiver, void 0, void 0, main$lambda$lambda$lambda$lambda$lambda$lambda_0);
     return Unit;
@@ -363,7 +363,7 @@
       while (tmp$.hasNext()) {
         var element = tmp$.next();
         article($receiver, void 0, main$lambda$lambda$lambda$lambda$lambda$lambda$lambda_0(element));
-        hr($receiver);
+        img($receiver, 'solidarity', 'solidarity.svg', 'solidarity');
       }
       return Unit;
     };

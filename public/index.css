@@ -41,20 +41,12 @@ hr {
     margin: 24px 0;
 }
 
-hr::before,
-hr::after {
-    display: inline-block;
-    transform-origin: 50% 15%;
-    transform: rotate(90deg);
-}
-
-hr::before {
-    content: '⦧';
-    color: #BBDEFB;
-}
-hr::after {
-    content: '⦦';
-    color: #FFCDD2;
+.solidarity {
+    opacity: 0.25;
+    height: 16px;
+    width: 16px;
+    margin: 26px auto 30px;
+    display: block;
 }
 
 a {
