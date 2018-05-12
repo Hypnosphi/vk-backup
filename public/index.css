@@ -68,3 +68,9 @@ iframe {
     width: calc(100vw - 64px);
     margin-top: 8px;
 }
+
+blockquote {
+    margin: 24px 0;
+    padding-left: 32px;
+    box-shadow: 2px 0 #CFD8DC inset;
+}
