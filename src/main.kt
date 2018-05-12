@@ -9,6 +9,53 @@ import kotlin.js.*
 
 const val MAX_VIDEOS = 50
 
+fun HtmlBlockTag.post(post: WallWallpost) {
+    post.text.split(Regex("\\n+")).forEachIndexed { i, paragraph ->
+        if (i == 0 && paragraph.length <= 100) {
+            h4 { +paragraph }
+        } else {
+            p { +paragraph }
+        }
+    }
+    @Suppress("UNNECESSARY_SAFE_CALL")
+    post.attachments?.forEach {
+        //                                    console.log(it)
+        @Suppress("UNNECESSARY_SAFE_CALL")
+        it.photo?.let {
+            img {
+                src = it.sizes.maxBy { it.width.toInt() + it.height.toInt() }!!.src
+            }
+        }
+        @Suppress("UNNECESSARY_SAFE_CALL")
+        it.link?.let {
+            a(it.url) {
+                it.photo?.let {
+                    div {
+                        img {
+                            src = it.sizes.maxBy { it.width.toInt() + it.height.toInt() }!!.src
+                        }
+                    }
+                }
+                +it.title
+            }
+        }
+        it.video?.let {
+            if (it.player == null) {
+                console.error("No player:", it)
+                it.photo_800?.let {
+                    img {
+                        src = it
+                    }
+                }
+            } else {
+                iframe {
+                    src = it.player
+                }
+            }
+        }
+    }
+}
+
 fun main(args: Array<String>) {
     dotenv.config()
     val groupId = process.env.VK_GROUP_ID
@@ -78,48 +125,10 @@ fun main(args: Array<String>) {
                         }
                         posts.forEach { post ->
                             article {
-                                post.text.split(Regex("\\n+")).forEachIndexed { i, paragraph ->
-                                    if (i == 0 && paragraph.length <= 100) {
-                                        h4 { +paragraph }
-                                    } else {
-                                        p { +paragraph }
-                                    }
-                                }
-                                @Suppress("UNNECESSARY_SAFE_CALL")
-                                post.attachments?.forEach {
-//                                    console.log(it)
-                                    @Suppress("UNNECESSARY_SAFE_CALL")
-                                    it.photo?.let {
-                                        img {
-                                            src = it.sizes.maxBy { it.width.toInt() + it.height.toInt() }!!.src
-                                        }
-                                    }
-                                    @Suppress("UNNECESSARY_SAFE_CALL")
-                                    it.link?.let {
-                                        a(it.url) {
-                                            it.photo?.let {
-                                                div {
-                                                    img {
-                                                        src = it.sizes.maxBy { it.width.toInt() + it.height.toInt() }!!.src
-                                                    }
-                                                }
-                                            }
-                                            +it.title
-                                        }
-                                    }
-                                    it.video?.let {
-                                        if (it.player == null) {
-                                            console.error("No player:", it)
-                                            it.photo_800?.let {
-                                                img {
-                                                    src = it
-                                                }
-                                            }
-                                        } else {
-                                            iframe {
-                                                src = it.player
-                                            }
-                                        }
+                                post(post)
+                                post.copy_history?.let {
+                                    blockQuote {
+                                        post(it[0])
                                     }
                                 }
                             }

@@ -1,4 +1,4 @@
-(function (_, Kotlin, $module$kotlin_extensions, $module$node_vk_sdk, $module$dotenv, $module$kotlinx_html_js, $module$fs) {
+(function (_, Kotlin, $module$kotlin_extensions, $module$node_vk_sdk, $module$kotlinx_html_js, $module$dotenv, $module$fs) {
   'use strict';
   var $$importsForInline$$ = _.$$importsForInline$$ || (_.$$importsForInline$$ = {});
   var Unit = Kotlin.kotlin.Unit;
@@ -9,6 +9,14 @@
   var listOf = Kotlin.kotlin.collections.listOf_i5x0yv$;
   var filterNotNull = Kotlin.kotlin.collections.filterNotNull_m3lr2h$;
   var joinToString = Kotlin.kotlin.collections.joinToString_fmv235$;
+  var Regex_init = Kotlin.kotlin.text.Regex_init_61zpoe$;
+  var h4 = $module$kotlinx_html_js.kotlinx.html.h4_zdyoc7$;
+  var p = $module$kotlinx_html_js.kotlinx.html.p_8pggrc$;
+  var ensureNotNull = Kotlin.ensureNotNull;
+  var img = $module$kotlinx_html_js.kotlinx.html.img_evw26v$;
+  var div = $module$kotlinx_html_js.kotlinx.html.div_ri36nr$;
+  var a = $module$kotlinx_html_js.kotlinx.html.a_gu26kr$;
+  var iframe = $module$kotlinx_html_js.kotlinx.html.iframe_rz24s4$;
   var config = $module$dotenv.config;
   var ConsoleLogger = $module$node_vk_sdk.ConsoleLogger;
   var toList = Kotlin.kotlin.collections.toList_us0mfu$;
@@ -23,14 +31,7 @@
   var script = $module$kotlinx_html_js.kotlinx.html.script_fglb7v$;
   var head = $module$kotlinx_html_js.kotlinx.html.head_cwj6vx$;
   var h1 = $module$kotlinx_html_js.kotlinx.html.h1_vmej1w$;
-  var Regex_init = Kotlin.kotlin.text.Regex_init_61zpoe$;
-  var h4 = $module$kotlinx_html_js.kotlinx.html.h4_zdyoc7$;
-  var p = $module$kotlinx_html_js.kotlinx.html.p_8pggrc$;
-  var ensureNotNull = Kotlin.ensureNotNull;
-  var img = $module$kotlinx_html_js.kotlinx.html.img_evw26v$;
-  var div = $module$kotlinx_html_js.kotlinx.html.div_ri36nr$;
-  var a = $module$kotlinx_html_js.kotlinx.html.a_gu26kr$;
-  var iframe = $module$kotlinx_html_js.kotlinx.html.iframe_rz24s4$;
+  var blockQuote = $module$kotlinx_html_js.kotlinx.html.blockQuote_1wgk0f$;
   var article = $module$kotlinx_html_js.kotlinx.html.article_hpv6ge$;
   var body = $module$kotlinx_html_js.kotlinx.html.body_qwuuhi$;
   var html = $module$kotlinx_html_js.kotlinx.html.html_dq808k$;
@@ -128,6 +129,146 @@
     return joinToString(filterNotNull(listOf([$receiver.owner_id, $receiver.id, $receiver.access_key])), '_');
   }
   var MAX_VIDEOS;
+  function post$lambda$lambda(closure$paragraph) {
+    return function ($receiver) {
+      $receiver.unaryPlus_pdl1vz$(closure$paragraph);
+      return Unit;
+    };
+  }
+  function post$lambda$lambda_0(closure$paragraph) {
+    return function ($receiver) {
+      $receiver.unaryPlus_pdl1vz$(closure$paragraph);
+      return Unit;
+    };
+  }
+  var get_lastIndex = Kotlin.kotlin.collections.get_lastIndex_m7z4lg$;
+  function post$lambda$lambda$lambda(closure$it) {
+    return function ($receiver) {
+      var $receiver_0 = closure$it.sizes;
+      var maxBy$result;
+      maxBy$break: do {
+        var tmp$;
+        if ($receiver_0.length === 0) {
+          maxBy$result = null;
+          break maxBy$break;
+        }
+        var maxElem = $receiver_0[0];
+        var it = maxElem;
+        var maxValue = numberToInt(it.width) + numberToInt(it.height) | 0;
+        tmp$ = get_lastIndex($receiver_0);
+        for (var i = 1; i <= tmp$; i++) {
+          var e = $receiver_0[i];
+          var v = numberToInt(e.width) + numberToInt(e.height) | 0;
+          if (Kotlin.compareTo(maxValue, v) < 0) {
+            maxElem = e;
+            maxValue = v;
+          }
+        }
+        maxBy$result = maxElem;
+      }
+       while (false);
+      $receiver.src = ensureNotNull(maxBy$result).src;
+      return Unit;
+    };
+  }
+  function post$lambda$lambda$lambda$lambda$lambda$lambda(closure$it) {
+    return function ($receiver) {
+      var $receiver_0 = closure$it.sizes;
+      var maxBy$result;
+      maxBy$break: do {
+        var tmp$;
+        if ($receiver_0.length === 0) {
+          maxBy$result = null;
+          break maxBy$break;
+        }
+        var maxElem = $receiver_0[0];
+        var it = maxElem;
+        var maxValue = numberToInt(it.width) + numberToInt(it.height) | 0;
+        tmp$ = get_lastIndex($receiver_0);
+        for (var i = 1; i <= tmp$; i++) {
+          var e = $receiver_0[i];
+          var v = numberToInt(e.width) + numberToInt(e.height) | 0;
+          if (Kotlin.compareTo(maxValue, v) < 0) {
+            maxElem = e;
+            maxValue = v;
+          }
+        }
+        maxBy$result = maxElem;
+      }
+       while (false);
+      $receiver.src = ensureNotNull(maxBy$result).src;
+      return Unit;
+    };
+  }
+  function post$lambda$lambda$lambda$lambda$lambda(closure$it) {
+    return function ($receiver) {
+      img($receiver, void 0, void 0, void 0, post$lambda$lambda$lambda$lambda$lambda$lambda(closure$it));
+      return Unit;
+    };
+  }
+  function post$lambda$lambda$lambda_0(closure$it) {
+    return function ($receiver) {
+      var tmp$;
+      if ((tmp$ = closure$it.photo) != null) {
+        div($receiver, void 0, post$lambda$lambda$lambda$lambda$lambda(tmp$));
+      }
+      $receiver.unaryPlus_pdl1vz$(closure$it.title);
+      return Unit;
+    };
+  }
+  function post$lambda$lambda$lambda$lambda(closure$it) {
+    return function ($receiver) {
+      $receiver.src = closure$it;
+      return Unit;
+    };
+  }
+  function post$lambda$lambda$lambda_1(closure$it) {
+    return function ($receiver) {
+      $receiver.src = closure$it.player;
+      return Unit;
+    };
+  }
+  function post($receiver, post) {
+    var tmp$;
+    var $receiver_0 = post.text;
+    var tmp$_0, tmp$_0_0;
+    var index = 0;
+    tmp$_0 = Regex_init('\\n+').split_905azu$($receiver_0, 0).iterator();
+    while (tmp$_0.hasNext()) {
+      var item = tmp$_0.next();
+      if ((tmp$_0_0 = index, index = tmp$_0_0 + 1 | 0, tmp$_0_0) === 0 && item.length <= 100) {
+        h4($receiver, void 0, post$lambda$lambda(item));
+      }
+       else {
+        p($receiver, void 0, post$lambda$lambda_0(item));
+      }
+    }
+    if ((tmp$ = post.attachments) != null) {
+      var tmp$_1;
+      for (tmp$_1 = 0; tmp$_1 !== tmp$.length; ++tmp$_1) {
+        var element = tmp$[tmp$_1];
+        var tmp$_2, tmp$_3, tmp$_4;
+        if ((tmp$_2 = element.photo) != null) {
+          img($receiver, void 0, void 0, void 0, post$lambda$lambda$lambda(tmp$_2));
+        }
+        if ((tmp$_3 = element.link) != null) {
+          a($receiver, tmp$_3.url, void 0, void 0, post$lambda$lambda$lambda_0(tmp$_3));
+        }
+        if ((tmp$_4 = element.video) != null) {
+          var tmp$_5;
+          if (tmp$_4.player == null) {
+            console.error('No player:', tmp$_4);
+            if ((tmp$_5 = tmp$_4.photo_800) != null) {
+              img($receiver, void 0, void 0, void 0, post$lambda$lambda$lambda$lambda(tmp$_5));
+            }
+          }
+           else {
+            iframe($receiver, void 0, void 0, post$lambda$lambda$lambda_1(tmp$_4));
+          }
+        }
+      }
+    }
+  }
   function main$lambda($receiver) {
     $receiver.logger = new ConsoleLogger();
     $receiver.token = process.env.VK_TOKEN;
@@ -212,145 +353,18 @@
     $receiver.unaryPlus_pdl1vz$('\u041A\u043E\u043C\u0438\u0442\u0435\u0442 \u041E\u0431\u0449\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u043E\u0439 \u0421\u0430\u043C\u043E\u0437\u0430\u0449\u0438\u0442\u044B');
     return Unit;
   }
-  function main$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda(closure$paragraph) {
+  function main$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda(closure$it) {
     return function ($receiver) {
-      $receiver.unaryPlus_pdl1vz$(closure$paragraph);
-      return Unit;
-    };
-  }
-  function main$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda_0(closure$paragraph) {
-    return function ($receiver) {
-      $receiver.unaryPlus_pdl1vz$(closure$paragraph);
-      return Unit;
-    };
-  }
-  var get_lastIndex = Kotlin.kotlin.collections.get_lastIndex_m7z4lg$;
-  function main$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda(closure$it) {
-    return function ($receiver) {
-      var $receiver_0 = closure$it.sizes;
-      var maxBy$result;
-      maxBy$break: do {
-        var tmp$;
-        if ($receiver_0.length === 0) {
-          maxBy$result = null;
-          break maxBy$break;
-        }
-        var maxElem = $receiver_0[0];
-        var it = maxElem;
-        var maxValue = numberToInt(it.width) + numberToInt(it.height) | 0;
-        tmp$ = get_lastIndex($receiver_0);
-        for (var i = 1; i <= tmp$; i++) {
-          var e = $receiver_0[i];
-          var v = numberToInt(e.width) + numberToInt(e.height) | 0;
-          if (Kotlin.compareTo(maxValue, v) < 0) {
-            maxElem = e;
-            maxValue = v;
-          }
-        }
-        maxBy$result = maxElem;
-      }
-       while (false);
-      $receiver.src = ensureNotNull(maxBy$result).src;
-      return Unit;
-    };
-  }
-  function main$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda(closure$it) {
-    return function ($receiver) {
-      var $receiver_0 = closure$it.sizes;
-      var maxBy$result;
-      maxBy$break: do {
-        var tmp$;
-        if ($receiver_0.length === 0) {
-          maxBy$result = null;
-          break maxBy$break;
-        }
-        var maxElem = $receiver_0[0];
-        var it = maxElem;
-        var maxValue = numberToInt(it.width) + numberToInt(it.height) | 0;
-        tmp$ = get_lastIndex($receiver_0);
-        for (var i = 1; i <= tmp$; i++) {
-          var e = $receiver_0[i];
-          var v = numberToInt(e.width) + numberToInt(e.height) | 0;
-          if (Kotlin.compareTo(maxValue, v) < 0) {
-            maxElem = e;
-            maxValue = v;
-          }
-        }
-        maxBy$result = maxElem;
-      }
-       while (false);
-      $receiver.src = ensureNotNull(maxBy$result).src;
-      return Unit;
-    };
-  }
-  function main$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda(closure$it) {
-    return function ($receiver) {
-      img($receiver, void 0, void 0, void 0, main$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda(closure$it));
-      return Unit;
-    };
-  }
-  function main$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda_0(closure$it) {
-    return function ($receiver) {
-      var tmp$;
-      if ((tmp$ = closure$it.photo) != null) {
-        div($receiver, void 0, main$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda(tmp$));
-      }
-      $receiver.unaryPlus_pdl1vz$(closure$it.title);
-      return Unit;
-    };
-  }
-  function main$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda(closure$it) {
-    return function ($receiver) {
-      $receiver.src = closure$it;
-      return Unit;
-    };
-  }
-  function main$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda_1(closure$it) {
-    return function ($receiver) {
-      $receiver.src = closure$it.player;
+      post($receiver, closure$it[0]);
       return Unit;
     };
   }
   function main$lambda$lambda$lambda$lambda$lambda$lambda$lambda_0(closure$post) {
     return function ($receiver) {
       var tmp$;
-      var $receiver_0 = closure$post.text;
-      var tmp$_0, tmp$_0_0;
-      var index = 0;
-      tmp$_0 = Regex_init('\\n+').split_905azu$($receiver_0, 0).iterator();
-      while (tmp$_0.hasNext()) {
-        var item = tmp$_0.next();
-        if ((tmp$_0_0 = index, index = tmp$_0_0 + 1 | 0, tmp$_0_0) === 0 && item.length <= 100) {
-          h4($receiver, void 0, main$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda(item));
-        }
-         else {
-          p($receiver, void 0, main$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda_0(item));
-        }
-      }
-      if ((tmp$ = closure$post.attachments) != null) {
-        var tmp$_1;
-        for (tmp$_1 = 0; tmp$_1 !== tmp$.length; ++tmp$_1) {
-          var element = tmp$[tmp$_1];
-          var tmp$_2, tmp$_3, tmp$_4;
-          if ((tmp$_2 = element.photo) != null) {
-            img($receiver, void 0, void 0, void 0, main$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda(tmp$_2));
-          }
-          if ((tmp$_3 = element.link) != null) {
-            a($receiver, tmp$_3.url, void 0, void 0, main$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda_0(tmp$_3));
-          }
-          if ((tmp$_4 = element.video) != null) {
-            var tmp$_5;
-            if (tmp$_4.player == null) {
-              console.error('No player:', tmp$_4);
-              if ((tmp$_5 = tmp$_4.photo_800) != null) {
-                img($receiver, void 0, void 0, void 0, main$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda(tmp$_5));
-              }
-            }
-             else {
-              iframe($receiver, void 0, void 0, main$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda_1(tmp$_4));
-            }
-          }
-        }
+      post($receiver, closure$post);
+      if ((tmp$ = closure$post.copy_history) != null) {
+        blockQuote($receiver, void 0, main$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda$lambda(tmp$));
       }
       return Unit;
     };
@@ -501,10 +515,11 @@
       return MAX_VIDEOS;
     }
   });
+  _.post_r7ut6y$ = post;
   _.main_kand9s$ = main;
   PAGE_SIZE = 100;
   MAX_VIDEOS = 50;
   main([]);
   Kotlin.defineModule('vk-backup', _);
   return _;
-}(module.exports, require('kotlin'), require('kotlin-extensions'), require('node-vk-sdk'), require('dotenv'), require('kotlinx-html-js'), require('fs')));
+}(module.exports, require('kotlin'), require('kotlin-extensions'), require('node-vk-sdk'), require('kotlinx-html-js'), require('dotenv'), require('fs')));

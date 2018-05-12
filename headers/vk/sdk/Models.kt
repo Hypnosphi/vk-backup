@@ -2991,19 +2991,7 @@ external interface WallWallpostToId {
     var copy_owner_id: Number
     var copy_post_id: Number
 }
-external interface WallWallpostFull {
-    var id: Number
-    var from_id: Number
-    var owner_id: Number
-    var date: Number
-    var views: WallViews
-    var access_key: String
-    var post_type: String
-    var text: String
-    var signer_id: Number
-    var attachments: Array<WallWallpostAttachment>?
-    var geo: BaseGeo
-    var post_source: WallPostSource
+external interface WallWallpostFull: WallWallpost {
     var copy_history: Array<WallWallpost>
     var can_edit: Number
     var created_by: Number
